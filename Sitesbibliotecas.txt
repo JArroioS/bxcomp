@@ -1,0 +1,3 @@
+String: https://www.geeksforgeeks.org/c-library-string-h/
+Ctype.h: https://www.geeksforgeeks.org/ctype-hcctype-library-in-c-c-with-examples/
+Math.h https://www.geeksforgeeks.org/c-library-math_h/
