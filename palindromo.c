@@ -6,10 +6,9 @@
 
 typedef int bool;
 
-bool palin(char texto[100], int posicaoInicial, int posicaoFinal)
+bool palin(char *texto, int posicaoInicial, int posicaoFinal)
 {
-
-    for(int i = posicaoFinal-posicaoInicial; i>0; i--)
+    for(int i = ((posicaoFinal-posicaoInicial)/2) + 1; i>0; i--)
     {
         if(texto[posicaoInicial+i] != texto[posicaoFinal-i])
         {
@@ -23,13 +22,14 @@ bool palin(char texto[100], int posicaoInicial, int posicaoFinal)
 int main()
 {
     bool verificacao;
+    //verificao = false;
 
-    char string[100];
+    char * string;
     scanf("%[^\n]%*c", string);
 
     int tamanhoString = strlen(string);
 
-    for(int i = 0; i<tamanhoString-2; i++)
+    for(int i = 0; i < (tamanhoString-2); i++)
     {
         for(int j = tamanhoString-1; j > (i+1); j--)
         {
@@ -38,25 +38,12 @@ int main()
                 verificacao = palin(string, i, j);
                 if(verificacao == true)
                 {
-                    break;
+                    printf("Tem palindromo");
+                    return 1;
                 }
             }
         }
-
-        if(verificacao == true)
-        {
-            break;
-        }
     }
-
-    if(verificacao == true)
-    {
-        printf("Tem palindromo");
-    }
-    else
-    {
-        printf("Nao tem palindromo");
-    }
-
+    printf("Nao tem palindromo");
     return 0;
 }
