@@ -2,8 +2,7 @@
 #include <string.h>
 #include <math.h>
 
-int main()
-{
+int main(){
     int missaoCompleta;
     float tamanhoObstaculos;
     int tamanhoObstaculosCorrigido;
@@ -14,21 +13,17 @@ int main()
     int numeroCasos;
     scanf("%d",&numeroCasos);
 
-    for(int n=0; n<numeroCasos; n++)
-    {
+    for(int n=0; n<numeroCasos; n++){
         missaoCompleta = 1;
-        while(1)
-        {
+        while(1){
             tamanhoObstaculos = 0;
             scanf("%s",string1);
-            if(!strcmp(string1,"fim"))
-            {
+            if(!strcmp(string1,"fim")){
                 break;
             }
             scanf("%s",string2);
 
-            for(int i = 0; i<strlen(string1); i++)
-            {
+            for(int i = 0; i<strlen(string1); i++){
 
                 tamanhoObstaculos += (int)string1[i];
             }
@@ -36,28 +31,22 @@ int main()
             tamanhoObstaculos /= 15*strlen(string1);
             tamanhoObstaculosCorrigido = (int)floor(tamanhoObstaculos);
 
-            if(!strcmp(string2,"botaoesquerdo"))
-            {
-                if(tamanhoObstaculosCorrigido%2 == 0)
-                {
+            if(!strcmp(string2,"botaoesquerdo")){
+                if(tamanhoObstaculosCorrigido%2 == 0){
                     missaoCompleta = 0;
                 }
             }
-            else
-            {
-                if(tamanhoObstaculosCorrigido%2 != 0)
-                {
+            else{
+                if(tamanhoObstaculosCorrigido%2 != 0){
                     missaoCompleta = 0;
                 }
             }
         }
 
-        if(missaoCompleta == 1)
-        {
+        if(missaoCompleta == 1){
             printf("MISSAO COMPLETA!! RESPECT + B)\n");
         }
-        else
-        {
+        else{
             printf("TUDO QUE A GENTE PRECISAVA FAZER ERA SEGUIR O MALDITO TREM, CJ!\n");
         }
     }
