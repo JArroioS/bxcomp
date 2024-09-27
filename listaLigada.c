@@ -15,7 +15,6 @@ void inicializar(Lista *lista){
 }
 
 void adicionarNo(Lista *lista, int valorNum){
-
     no *novo;
     novo = malloc(sizeof(no));
     (*novo).valor = valorNum;
@@ -34,8 +33,7 @@ void adicionarNo(Lista *lista, int valorNum){
     }
 }
 
-void printLista(Lista * lista)
-{
+void printLista(Lista * lista){
     no *atual;
     atual = (*lista).inicio;
     while(atual != NULL){
