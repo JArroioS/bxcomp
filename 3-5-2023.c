@@ -25,12 +25,10 @@ int main() {
         int BST = HP + ATK + DEF + SPC + SPE;
 
         // Resultado baseado na verificação
-        if (pokemon[0] == 'Q' || pokemon[0] == 'q' || pokemon[0] == 'U' || pokemon[0] == 'u' || pokemon[0] == 'X' || pokemon[0] == 'x' || pokemon[0] == 'Y' || pokemon[0] == 'y' || BST < 195 || BST > 744)
-        {
+        if (pokemon[0] == 'Q' || pokemon[0] == 'q' || pokemon[0] == 'U' || pokemon[0] == 'u' || pokemon[0] == 'X' || pokemon[0] == 'x' || pokemon[0] == 'Y' || pokemon[0] == 'y' || BST < 195 || BST > 744){
             printf("%s ta esquisito hein, deve ser um Digimon!\n", pokemon);
         }
-        else
-        {
+        else{
             printf("%s parece legitimo, da ate pra acreditar.\n", pokemon);
         }
     }
